@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">IMC</string>
+    <string name="btnCalc">Calcular</string>
+    <string name="male">Hombre</string>
+    <string name="woman">Mujer</string>
+    <string name="altura">Altura</string>
+    <string name="peso">Peso</string>
+    <string name="edad">Edad</string>
+    <string name="resultado">Tu Resultado</string>
+    <string name="btnReCalc">Re-Calcular</string>
+    <string name="resultado_card">Normal</string>
+    <string name="peso_card">20.76</string>
+    <string name="texto_card">Se encuentra dentro del rango de peso normal o saludable.</string>
+</resources>
