@@ -32,7 +32,7 @@ class Resultado : AppCompatActivity() {
         initComponent()
         initListeners()
 
-        result = intent.extras?.getDouble(MainActivity.RESULT) ?: -1.0
+        result = intent.extras?.getDouble("Resultado") ?: -1.0
 
         calcular(result)
 
@@ -93,6 +93,5 @@ class Resultado : AppCompatActivity() {
             }
         }
     }
-
-    private fun textView() = txt_card
+    
 }

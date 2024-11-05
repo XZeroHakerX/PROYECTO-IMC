@@ -37,9 +37,6 @@ class MainActivity : AppCompatActivity() {
     private var edadActual:Int = 30
     private var pesoActual:Int = 60
 
-    companion object{
-        const val RESULT = "Resultado."
-    }
 
 
 
@@ -147,7 +144,7 @@ class MainActivity : AppCompatActivity() {
 
     fun irResultado(resultado: Double){
         val intento = Intent(this, Resultado::class.java)
-        intento.putExtra(RESULT,resultado)
+        intento.putExtra("Resultado",resultado)
         startActivity(intento)
     }
 
