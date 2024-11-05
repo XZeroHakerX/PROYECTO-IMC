@@ -10,5 +10,12 @@
     <string name="btnReCalc">Re-Calcular</string>
     <string name="resultado_card">Normal</string>
     <string name="peso_card">20.76</string>
-    <string name="texto_card">Se encuentra dentro del rango de peso normal o saludable.</string>
+    <string name="peso_bajo">BAJO</string>
+    <string name="peso_normal">NORMAL</string>
+    <string name="peso_alto">ALTO</string>
+    <string name="peso_sobrepeso">SOBREPESO</string>
+    <string name="peso_bajo_s">Se encuentra dentro del rango de peso insuficiente.</string>
+    <string name="peso_normal_s">Se encuentra dentro del rango de peso normal o saludable.</string>
+    <string name="peso_alto_s">Se encuentra dentro del rango de sobrepeso.</string>
+    <string name="peso_sobrepeso_s">Se encuentra dentro del rango de obesidad.</string>
 </resources>

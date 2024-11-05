@@ -7,6 +7,10 @@
     <color name="boton">#FF303030</color>
     <color name="texto">#FFFFFFFF</color>
     <color name="seleccion_card">#FF003080</color>
+    <color name="peso_bajo">#FF0000FF</color>
+    <color name="peso_normal">#FF00FF00</color>
+    <color name="peso_alto">#FFFFFF00</color>
+    <color name="peso_sobre">#FFFF0000</color>
 
 
 </resources>

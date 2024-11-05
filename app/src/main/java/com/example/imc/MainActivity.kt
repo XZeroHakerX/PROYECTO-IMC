@@ -1,6 +1,7 @@
 package com.example.imc
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.icu.text.DecimalFormat
 import android.os.Bundle
 import android.transition.Slide
@@ -33,7 +34,12 @@ class MainActivity : AppCompatActivity() {
     private lateinit var texto_peso:TextView
 
     private var alturaActual:Int = 120
+    private var edadActual:Int = 30
+    private var pesoActual:Int = 60
 
+    companion object{
+        const val RESULT = "Resultado."
+    }
 
 
 
@@ -81,19 +87,42 @@ class MainActivity : AppCompatActivity() {
             alturaActual = df.format(value).toInt()
             texto_altura.text = alturaActual.toString() + " cm"
         }
-        boton_calcular.setOnClickListener{ calcularImc()}
-        boton_mas_peso.setOnClickListener{}
-        boton_menos_peso.setOnClickListener{}
-        boton_mas_edad.setOnClickListener{}
-        boton_menos_edad.setOnClickListener{}
+        boton_calcular.setOnClickListener{
+            irResultado(calcularImc())
+        }
+        boton_mas_peso.setOnClickListener{masPeso()}
+        boton_menos_peso.setOnClickListener{menosPeso()}
+        boton_mas_edad.setOnClickListener{masEdad()}
+        boton_menos_edad.setOnClickListener{menosEdad()}
 
     }
 
+    fun masPeso(){
+        pesoActual++
+        texto_peso.text = pesoActual.toString()
+    }
+
+    fun menosPeso(){
+        pesoActual--
+        texto_peso.text = pesoActual.toString()
+    }
+
+    fun masEdad(){
+        edadActual++
+        texto_edad.text = edadActual.toString()
+    }
+
+    fun menosEdad(){
+        edadActual--
+        texto_edad.text = edadActual.toString()
+    }
 
 
     fun initPantalla() {
 
         card_hombre.setCardBackgroundColor(resources.getColor(R.color.seleccion_card,null))
+        texto_edad.text = edadActual.toString()
+        texto_peso.text = pesoActual.toString()
 
     }
 
@@ -109,9 +138,17 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    fun calcularImc() {
+    fun calcularImc(): Double {
+        val df = DecimalFormat("#.##")
+        val imc = pesoActual / ((alturaActual.toDouble()/100) * (alturaActual.toDouble()/100))
+        return df.format(imc).replace(",", ".").toDouble()
 
+    }
 
+    fun irResultado(resultado: Double){
+        val intento = Intent(this, Resultado::class.java)
+        intento.putExtra(RESULT,resultado)
+        startActivity(intento)
     }
 
 

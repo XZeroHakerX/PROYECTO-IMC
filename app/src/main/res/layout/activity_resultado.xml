@@ -70,7 +70,7 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="20dp"
                     android:layout_marginTop="80dp"
-                    android:text="@string/texto_card"
+                    android:text=""
                     android:textColor="@color/texto"
                     android:textSize="26sp" />
             </LinearLayout>
@@ -88,7 +88,7 @@
         app:layout_constraintBottom_toBottomOf="parent">
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/btn_recalcular"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginLeft="10sp"
