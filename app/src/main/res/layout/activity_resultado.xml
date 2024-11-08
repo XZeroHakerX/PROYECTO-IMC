@@ -89,14 +89,17 @@
 
         <Button
             android:id="@+id/btn_recalcular"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="373dp"
+            android:layout_height="wrap_content"
             android:layout_marginLeft="10sp"
             android:layout_marginRight="10sp"
             android:layout_marginBottom="5sp"
             android:layout_weight="1"
             android:backgroundTint="@color/boton"
-            android:text="@string/btnReCalc" />
+            android:text="@string/btnReCalc"
+            android:textColor="@color/texto"
+            android:textSize="20sp" />
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

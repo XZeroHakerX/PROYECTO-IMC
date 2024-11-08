@@ -360,11 +360,13 @@
 
         <Button
             android:id="@+id/btnCalcular"
-            android:layout_width="0dp"
-            android:layout_height="60dp"
+            android:layout_width="383dp"
+            android:layout_height="68dp"
             android:layout_weight="1"
             android:backgroundTint="@color/boton"
-            android:text="@string/btnCalc" />
+            android:text="@string/btnCalc"
+            android:textColor="@color/texto"
+            android:textSize="20sp" />
     </LinearLayout>
 
 
